@@ -11,7 +11,7 @@ class Nave(pygame.sprite.Sprite):
         self.rect.x = 50
         self.rect.y = 50
 
-        # move
+        #movimento
         self.speed = 0
         self.acceleration = 0.5 
         self.friction = 0.95  
@@ -19,7 +19,7 @@ class Nave(pygame.sprite.Sprite):
     def update(self, *args):
         keys = pygame.key.get_pressed()
 
-        # acceleration
+        #aceleração
         if keys[pygame.K_w]:
             self.speed -= self.acceleration
         elif keys[pygame.K_s]:
@@ -31,10 +31,10 @@ class Nave(pygame.sprite.Sprite):
         elif self.speed < -10:
             self.speed = -10
 
-        # velocidade Y
+        #velocidade vertical
         self.rect.y += self.speed
         
-        # collider
+        #colição
         if self.rect.y < 0:
             self.rect.top = 0
             self.speed = 0 

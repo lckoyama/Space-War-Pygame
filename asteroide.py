@@ -14,7 +14,7 @@ class Asteroide(pygame.sprite.Sprite):
         self.rect.x = 840 + random.randint(1, 400)
         self.rect.y = random.randint(2, 400)
 
-        # velocidade random
+        #velocidade aleatoria 
         self.speed = 1 + random.random() * 2
 
     def update(self, *args):
