@@ -69,7 +69,7 @@ while gameLoop:
         objectGroup.update()
 
         survival_timer += 1
-        if survival_timer >= 3400:
+        if survival_timer >= 3000:
             game_won = True
             pygame.mixer.music.stop()
 
