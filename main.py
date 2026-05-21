@@ -69,14 +69,14 @@ while gameLoop:
         objectGroup.update()
 
         survival_timer += 1
-        if survival_timer >= 3000:
+        if survival_timer >= 1500:
             game_won = True
             pygame.mixer.music.stop()
 
         timer += 1
-        if timer > 30:
+        if timer > 10:
             timer = 0
-            if random.random() < 0.3:
+            if random.random() < 0.4:
                 Asteroide(objectGroup, asteroideGroup)
 
         #colisão
